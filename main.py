@@ -40,7 +40,7 @@ def preload():
     )
 
 
-@app.get("/prompt")
+@app.post("/prompt")
 def prompt(_input: Input) -> Output:
     results = _generator.generate(
         _input.prompts,
